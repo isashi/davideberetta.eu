@@ -1,6 +1,7 @@
 <template>
   <div>
     <Header></Header>
+    <a class="button is-primary">Primary</a>
   </div>
 </template>
 
