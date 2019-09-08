@@ -4,8 +4,6 @@
       <svg
         ref="myLogo"
         id="logo"
-        width="1051"
-        height="121"
         viewBox="0 0 1051 121"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
