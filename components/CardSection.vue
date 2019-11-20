@@ -2,25 +2,13 @@
   <div class="card_section">
     <div class="container">
       <Card
-        title="Analysis"
-        description="Testo di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di prova"
-        image="/images/analysis.svg"
-        firstColor="#3503ad"
-        secondColor="#f7308c"
-      ></Card>
-      <Card
-        title="Design"
-        description="Testo di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di prova"
-        image="/images/design.svg"
-        firstColor="#ccff00"
-        secondColor="#09afff"
-      ></Card>
-      <Card
-        title="Code"
-        description="Testo di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di prova"
-        image="/images/code.svg"
-        firstColor="#e91e63"
-        secondColor="#ffeb3b"
+        v-for="(card, index) in cards"
+        :key="index"
+        :title="card.title"
+        :description="card.description"
+        :image="card.image"
+        :firstColor="card.firstColor"
+        :secondColor="card.secondColor"
       ></Card>
     </div>
   </div>
@@ -34,7 +22,34 @@ export default {
     Card
   },
   data() {
-    return {};
+    return {
+      cards: [
+        {
+          title: "Analysis",
+          description:
+            "Testo di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di prova",
+          image: "/images/analysis.svg",
+          firstColor: "#3503ad",
+          secondColor: "#f7308c"
+        },
+        {
+          title: "Design",
+          description:
+            "Testo di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di prova",
+          image: "/images/design.svg",
+          firstColor: "#ccff00",
+          secondColor: "#09afff"
+        },
+        {
+          title: "Code",
+          description:
+            "Testo di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di provaTesto di prova",
+          image: "/images/code.svg",
+          firstColor: "#e91e63",
+          secondColor: "#ffeb3b"
+        }
+      ]
+    };
   }
 };
 </script>
