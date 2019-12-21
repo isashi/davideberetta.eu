@@ -1,16 +1,14 @@
 <template>
   <div class="card_section">
-    <div class="container">
-      <Card
-        v-for="(card, index) in cards"
-        :key="index"
-        :title="card.title"
-        :description="card.description"
-        :image="card.image"
-        :firstColor="card.firstColor"
-        :secondColor="card.secondColor"
-      ></Card>
-    </div>
+    <Card
+      v-for="(card, index) in cards"
+      :key="index"
+      :title="card.title"
+      :description="card.description"
+      :image="card.image"
+      :firstColor="card.firstColor"
+      :secondColor="card.secondColor"
+    ></Card>
   </div>
 </template>
 
@@ -69,15 +67,23 @@ h2 {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #333;
+  background: linear-gradient(#000, #333);
 }
 
 .container {
   position: relative;
-  width: 1000px;
-  display: flex;
+  width: 80%;
+  display: grid;
   justify-content: space-between;
 }
+
+/* codice con Ricardo
+ .container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  height: 80vh;
+  margin: 10vh;
+} */
 </style>
 
 

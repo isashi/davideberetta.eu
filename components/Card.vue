@@ -33,14 +33,15 @@ export default {
 
 <style scoped>
 .cards {
+  margin: 0 20px; 
   border: solid 2px rgba(255, 255, 255, 0.5);
   position: relative;
-  width: 300px;
-  height: 400px;
+  height: 500px;
   background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(45deg, var(--firstColor), var(--secondColor));
 }
 
 .cards:before {
@@ -53,10 +54,6 @@ export default {
   background: rgba(255, 255, 255, 0.1);
   z-index: 20;
   pointer-events: none;
-}
-.cards,
-.cards:nth-child(1) .overlay {
-  background: linear-gradient(45deg, var(--firstColor), var(--secondColor));
 }
 
 .cards .imgBX {
@@ -92,6 +89,7 @@ export default {
   cursor: pointer;
   border-radius: 50%;
   transition: 0.5s;
+  background: linear-gradient(45deg, var(--firstColor), var(--secondColor));
 }
 
 .cards .overlay:hover {
