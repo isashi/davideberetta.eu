@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="grid-item">
     <div class="cards" :style="cssVars">
       <div class="imgBX">
         <div>
@@ -32,13 +32,26 @@ export default {
 </script>
 
 <style scoped>
+.grid-item {
+  flex-basis: 25%;
+  -ms-flex: auto;
+  position: relative;
+  margin: 10px 20px; 
+}
+
+@media(max-width: 1024px) {
+   .grid-item {
+    flex-basis: 50%;
+  }
+}
+
 .cards {
-  margin: 0 20px; 
   border: solid 2px rgba(255, 255, 255, 0.5);
   position: relative;
   height: 500px;
   background-color: #000;
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   background: linear-gradient(45deg, var(--firstColor), var(--secondColor));

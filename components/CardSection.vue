@@ -64,26 +64,11 @@ h2 {
   padding: 0;
   margin: 0;
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
   min-height: 100vh;
   background: linear-gradient(#000, #333);
 }
-
-.container {
-  position: relative;
-  width: 80%;
-  display: grid;
-  justify-content: space-between;
-}
-
-/* codice con Ricardo
- .container {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  height: 80vh;
-  margin: 10vh;
-} */
 </style>
 
 
