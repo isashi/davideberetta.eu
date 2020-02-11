@@ -19,7 +19,7 @@ header {
       rgba(2, 2, 2, 0.2) 65%,
       rgba(0, 0, 0, 1)
     ),
-    url("/images/mountain_compressed.jpg");
+    url("/images/header_compressed.jpg");
   height: 100vh;
   padding: 0 10%;
   background-size: cover;
