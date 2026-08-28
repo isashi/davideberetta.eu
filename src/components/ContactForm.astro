@@ -1,0 +1,30 @@
+{/*
+  Visual form ported from the old site. The `action` below is a placeholder —
+  collega un servizio reale (es. Formspree) prima di pubblicare.
+*/}
+<section class="contact_form_section" id="contatti" aria-label="Contatti">
+  <div class="container">
+    <div class="form-panel">
+      <div class="form">
+        <h2>Just say Hi!</h2>
+        <p class="contact-alt">Oppure scrivi direttamente a <a href="mailto:ciao@davideberetta.eu">ciao@davideberetta.eu</a></p>
+        <form id="contactform" class="gform" method="POST" action="#">
+          <div class="form-elements">
+            <div class="inputBox">
+              <input type="text" name="name" id="name" placeholder="Il tuo nome" autocomplete="name" required>
+            </div>
+            <div class="inputBox">
+              <input type="email" name="email" id="email" placeholder="La tua email" autocomplete="email" required>
+            </div>
+            <div class="inputBox">
+              <textarea rows="5" name="message" id="message" placeholder="Il tuo messaggio" required></textarea>
+            </div>
+            <div class="inputBox">
+              <input type="submit" value="invia" id="submit">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

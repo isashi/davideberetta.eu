@@ -1,0 +1,19 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  tags: string[];
+  firstColor: string;
+  secondColor: string;
+}
+
+const { title, description, tags, firstColor, secondColor } = Astro.props;
+---
+
+<article class="project-card" style={`--first-color: ${firstColor}; --second-color: ${secondColor}`}>
+  <h3>{title}</h3>
+  <p>{description}</p>
+  <ul class="project-tags" aria-label={`Tecnologie: ${title}`}>
+    {tags.map((tag) => <li>{tag}</li>)}
+  </ul>
+</article>

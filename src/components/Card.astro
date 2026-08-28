@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  firstColor: string;
+  secondColor: string;
+}
+
+const { title, description, image, firstColor, secondColor } = Astro.props;
+---
+
+<div
+  class="cards"
+  style={`--first-color: ${firstColor}; --second-color: ${secondColor}`}
+  tabindex="0"
+  role="group"
+  aria-label={`${title}: ${description}`}
+>
+  <div class="imgBX">
+    <div>
+      <img src={image} width="150" height="150" alt="" loading="lazy" />
+      <h2>{title}</h2>
+    </div>
+  </div>
+  <span class="reveal" aria-hidden="true"></span>
+  <div class="content" aria-hidden="true">
+    <h2>{title}</h2>
+    <p>{description}</p>
+  </div>
+</div>

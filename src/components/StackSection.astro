@@ -1,0 +1,32 @@
+---
+const stack = [
+  { name: 'Vue.js', pair: 0 },
+  { name: 'JavaScript', pair: 1 },
+  { name: 'HTML', pair: 2 },
+  { name: 'CSS / SCSS', pair: 0 },
+  { name: 'Astro', pair: 1 },
+  { name: 'Node.js', pair: 2 },
+  { name: 'Git', pair: 0 },
+  { name: 'Accessibilità', pair: 1 },
+  { name: 'Performance', pair: 2 }
+];
+
+const pairs = [
+  ['#3503ad', '#f7308c'],
+  ['#ccff00', '#09afff'],
+  ['#e91e63', '#ffeb3b']
+];
+---
+
+<section class="stack-section" id="stack" aria-label="Strumenti che uso">
+  <div class="container">
+    <h2 class="section-title">Strumenti che uso</h2>
+    <ul class="stack-list">
+      {stack.map(({ name, pair }) => (
+        <li class="stack-badge" style={`--b1: ${pairs[pair][0]}; --b2: ${pairs[pair][1]}`}>
+          {name}
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

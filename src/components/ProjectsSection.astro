@@ -1,0 +1,39 @@
+---
+import ProjectCard from '@components/ProjectCard.astro';
+
+const projects = [
+  {
+    title: 'Redesign di un’applicazione gestionale',
+    description:
+      'Rifacimento dell’interfaccia di un gestionale interno, con l’obiettivo di semplificare i flussi più usati ogni giorno e ridurre i passaggi necessari per le operazioni comuni.',
+    tags: ['Vue.js', 'UX', 'Refactor'],
+    firstColor: '#3503ad',
+    secondColor: '#f7308c'
+  },
+  {
+    title: 'Sito vetrina per un’attività locale',
+    description:
+      'Sito semplice e veloce per presentare servizi e contatti, pensato per caricare in fretta anche da mobile e con una buona base di accessibilità.',
+    tags: ['Astro', 'Performance', 'Accessibilità'],
+    firstColor: '#ccff00',
+    secondColor: '#09afff'
+  },
+  {
+    title: 'Automazione di un’attività ripetitiva',
+    description:
+      'Un piccolo tool per automatizzare un’attività manuale, pensato per risparmiare tempo su un compito che prima veniva svolto a mano ogni settimana.',
+    tags: ['Node.js', 'Script', 'Automazione'],
+    firstColor: '#e91e63',
+    secondColor: '#ffeb3b'
+  }
+];
+---
+
+<section class="projects-section" id="progetti" aria-label="Progetti">
+  <div class="container">
+    <h2 class="section-title">Progetti</h2>
+    <div class="projects-grid">
+      {projects.map((project) => <ProjectCard {...project} />)}
+    </div>
+  </div>
+</section>

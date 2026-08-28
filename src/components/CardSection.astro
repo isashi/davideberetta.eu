@@ -1,0 +1,36 @@
+---
+import Card from '@components/Card.astro';
+
+const cards = [
+  {
+    title: 'Analysis',
+    description:
+      'Prima di scrivere una riga di codice, capisco il problema: obiettivi, vincoli, utenti finali. Un progetto parte bene solo se le basi sono chiare.',
+    image: '/images/analysis.svg',
+    firstColor: '#3503ad',
+    secondColor: '#f7308c'
+  },
+  {
+    title: 'Design',
+    description:
+      'Traduco le idee in interfacce semplici da usare, coerenti nei dettagli e piacevoli da guardare, senza sacrificare la chiarezza per l’estetica.',
+    image: '/images/design.svg',
+    firstColor: '#ccff00',
+    secondColor: '#09afff'
+  },
+  {
+    title: 'Code',
+    description:
+      'Scrivo codice pulito, manutenibile e testato, con attenzione a performance e accessibilità: il lavoro non finisce al primo rilascio.',
+    image: '/images/code.svg',
+    firstColor: '#e91e63',
+    secondColor: '#ffeb3b'
+  }
+];
+---
+
+<section class="card-section" id="cosa-faccio" aria-label="Cosa faccio">
+  <div class="container">
+    {cards.map((card) => <Card {...card} />)}
+  </div>
+</section>

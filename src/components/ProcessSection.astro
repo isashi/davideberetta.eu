@@ -1,0 +1,45 @@
+---
+const steps = [
+  {
+    title: 'Scopro',
+    description: 'Capisco obiettivo, vincoli e utenti prima di aprire l’editor.',
+    pair: 0
+  },
+  {
+    title: 'Progetto',
+    description: 'Bozzo la struttura e le interazioni principali, senza fronzoli inutili.',
+    pair: 1
+  },
+  {
+    title: 'Sviluppo',
+    description: 'Costruisco per passi piccoli e verificabili, con codice leggibile.',
+    pair: 2
+  },
+  {
+    title: 'Rifinisco',
+    description: 'Controllo dettagli, performance e accessibilità prima di consegnare.',
+    pair: 0
+  }
+];
+
+const pairs = [
+  ['#3503ad', '#f7308c'],
+  ['#ccff00', '#09afff'],
+  ['#e91e63', '#ffeb3b']
+];
+---
+
+<section class="process-section" id="come-lavoro" aria-label="Come lavoro">
+  <div class="container">
+    <h2 class="section-title">Come lavoro</h2>
+    <ol class="process-steps">
+      {steps.map(({ title, description, pair }, index) => (
+        <li class="process-step" style={`--b1: ${pairs[pair][0]}; --b2: ${pairs[pair][1]}`}>
+          <span class="process-number">{String(index + 1).padStart(2, '0')}</span>
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>

@@ -1,0 +1,37 @@
+---
+import Nav from '@components/Nav.astro';
+import Hero from '@components/Hero.astro';
+import AboutMe from '@components/AboutMe.astro';
+import CardSection from '@components/CardSection.astro';
+import StackSection from '@components/StackSection.astro';
+import ProcessSection from '@components/ProcessSection.astro';
+import ProjectsSection from '@components/ProjectsSection.astro';
+import CtaBand from '@components/CtaBand.astro';
+import ContactForm from '@components/ContactForm.astro';
+import MiniFooter from '@components/MiniFooter.astro';
+import '@styles/global.css';
+---
+
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Davide Beretta's personal website" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>davideberetta.eu</title>
+  </head>
+  <body>
+    <Nav />
+    <Hero />
+    <AboutMe />
+    <CardSection />
+    <StackSection />
+    <ProcessSection />
+    <ProjectsSection />
+    <CtaBand />
+    <ContactForm />
+    <MiniFooter />
+  </body>
+</html>
